@@ -2,7 +2,7 @@ function Iitem({ name, importance }) {
     return (
       <li className="item">
         {name} {importance && (
-          <span> (Importance: {importance})</span>
+          <i> (Importance: {importance})</i>
         )}
       </li>
     );

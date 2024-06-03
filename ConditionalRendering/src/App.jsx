@@ -1,32 +1,51 @@
 import Iitem from "./assets/components/Challenge2Component";
 
-function Item({ name, isPacked }) {
-  return (
-    <li className="item">
-      {name} {isPacked ? '✔':`❌`}
-    </li>
-  );
-}
+import Item from "./assets/components/challenge1component";
 
-export default function PackingList() {
-  return (
+ function App() {
+
+   return (
+    <>
+     <section>
+       <h1>Sally Ride's Packing List</h1>
+       <ul>
+         <Item 
+           isPacked={true} 
+           name="Space suit" 
+         />
+         <Item 
+           isPacked={true} 
+           name="Helmet with a golden leaf" 
+         />
+         <Item 
+           isPacked={false} 
+           name="Photo of Tam" 
+         />
+       </ul>
+     </section>
+     
     <section>
       <h1>Sally Ride's Packing List</h1>
       <ul>
-        <Item 
-          isPacked={true} 
+        <Iitem 
+          importance={9} 
           name="Space suit" 
         />
-        <Item 
-          isPacked={true} 
+        <Iitem 
+          importance={0} 
           name="Helmet with a golden leaf" 
         />
-        <Item 
-          isPacked={false} 
+        <Iitem 
+          importance={6} 
           name="Photo of Tam" 
         />
       </ul>
     </section>
-  );
-}
+  
 
+     
+     </>
+   );
+ }
+
+export default App;
